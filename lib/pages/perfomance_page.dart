@@ -113,7 +113,7 @@ class _StudentPerformancePageState extends State<StudentPerformancePage> {
                   axisSide: meta.axisSide,
                   space: 8,
                   child: Text(
-                    subject.length > 6 ? subject.substring(0, 6) + "..." : subject,
+                    subject.length > 6 ? "${subject.substring(0, 6)}..." : subject,
                     style: const TextStyle(fontSize: 10),
                   ),
                 );
@@ -150,11 +150,11 @@ class _StudentPerformancePageState extends State<StudentPerformancePage> {
                     text:
                     "${test['date']} - ${test['marks']}/${test['total']}  (${percentage.toStringAsFixed(2)}%)",
                   );
-                }).toList(),
+                }),
                 pw.SizedBox(height: 10),
               ],
             );
-          }).toList(),
+          }),
         ],
       ),
     );
@@ -212,12 +212,12 @@ class _StudentPerformancePageState extends State<StudentPerformancePage> {
                           subtitle: Text(
                               "Marks: ${test['marks']}/${test['total']} (${percentage.toStringAsFixed(2)}%)"),
                         );
-                      }).toList(),
+                      }),
                     ],
                   ),
                 ),
               );
-            }).toList(),
+            }),
           ],
         ),
       ),

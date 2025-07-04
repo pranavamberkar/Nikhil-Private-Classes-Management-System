@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class StudentManagementPage extends StatefulWidget {
+  const StudentManagementPage({super.key});
+
   @override
   _StudentManagementPageState createState() => _StudentManagementPageState();
 }
@@ -73,9 +75,11 @@ class _StudentManagementPageState extends State<StudentManagementPage> {
       firstDate: DateTime(2000),
       lastDate: DateTime(2101),
     );
-    setState(() {
-      _enrollmentDateController.text = DateFormat('yyyy-MM-dd').format(picked);
-    });
+    if (picked != null) {
+      setState(() {
+        _enrollmentDateController.text = DateFormat('yyyy-MM-dd').format(picked);
+      });
+    }
     }
 
   @override

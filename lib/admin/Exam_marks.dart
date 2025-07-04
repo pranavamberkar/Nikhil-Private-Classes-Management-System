@@ -69,7 +69,9 @@ class _ExamMarksState extends State<ExamMarks> {
                         );
                         setState(() {
                           selectedDate = pickedDate;
-                          dateController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
+                          if (pickedDate != null) {
+                            dateController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
+                          }
                         });
                                             },
                     ),

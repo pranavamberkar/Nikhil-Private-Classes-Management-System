@@ -223,7 +223,7 @@ class _AttendancePage extends State<AttendancePage> {
                   lastDate: DateTime(2100),
                 );
                 _dateController.text =
-                '${pickedDate.year}-${pickedDate.month.toString().padLeft(2, '0')}-${pickedDate.day.toString().padLeft(2, '0')}';
+                '${pickedDate?.year}-${pickedDate?.month.toString().padLeft(2, '0')}-${pickedDate?.day.toString().padLeft(2, '0')}';
                             },
             ),
             const SizedBox(height: 20),
