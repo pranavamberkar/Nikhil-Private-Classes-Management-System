@@ -156,10 +156,8 @@ class _StudentDetailsPageState extends State<StudentDetailsPage> {
   Future<void> _selectDate() async {
     DateTime? selectedDate = await showDatePicker(
         context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime(2101));
-    if (selectedDate != null) {
-      setState(() => _paymentDateController.text = "${selectedDate.toLocal()}".split(' ')[0]);
+    setState(() => _paymentDateController.text = "${selectedDate.toLocal()}".split(' ')[0]);
     }
-  }
 
   void _toggleEditing() => setState(() => _isEditing = !_isEditing);
 

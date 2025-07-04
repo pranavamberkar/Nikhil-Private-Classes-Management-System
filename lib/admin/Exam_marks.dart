@@ -67,13 +67,11 @@ class _ExamMarksState extends State<ExamMarks> {
                           firstDate: DateTime(2020),
                           lastDate: DateTime(2030),
                         );
-                        if (pickedDate != null) {
-                          setState(() {
-                            selectedDate = pickedDate;
-                            dateController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
-                          });
-                        }
-                      },
+                        setState(() {
+                          selectedDate = pickedDate;
+                          dateController.text = DateFormat('yyyy-MM-dd').format(pickedDate);
+                        });
+                                            },
                     ),
                     TextField(
                       controller: totalMarksController,

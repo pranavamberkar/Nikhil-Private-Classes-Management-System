@@ -22,7 +22,6 @@ class _FeesManagementPageState extends State<FeesManagementPage> {
 
   Future<void> _fetchStudentId() async {
     String? userEmail = _auth.currentUser?.email;
-    if (userEmail == null) return;
 
     try {
       QuerySnapshot querySnapshot = await _firestore
